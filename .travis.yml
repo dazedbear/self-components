@@ -34,4 +34,4 @@ deploy:
   skip_cleanup: true
   github-token: $GITHUB_SELF_COMPONENTS
   on:
-    branch: master
+    branch: gh-pages
