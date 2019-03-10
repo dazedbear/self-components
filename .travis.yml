@@ -35,4 +35,4 @@ deploy:
   local-dir: public
   github-token: $GITHUB_SELF_COMPONENTS
   on:
-    branch: gh-pages
+    branch: master
