@@ -26,13 +26,12 @@ install:
 
 # 運行腳本
 script:
-- npm test
-- npm run build
+- npm run build-storybook
 
 # 待補
 deploy:
   provider: pages
   skip_cleanup: true
-  github-token: $GITHUB_MOVIE_PROJECT
+  github-token: $GITHUB_SELF_COMPONENTS
   on:
     branch: master

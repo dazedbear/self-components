@@ -6,7 +6,7 @@ import cleanCode from './cleanCode.md';
 import immutable from './immutable.md';
 
 
-storiesOf('文件', module)
+storiesOf('file', module)
   .add('React Development', doc(react))
   .add('Storybook Development', doc(storybook))
   .add('Immutable', doc(immutable))
