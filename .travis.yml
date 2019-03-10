@@ -32,6 +32,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
+  local-dir: public
   github-token: $GITHUB_SELF_COMPONENTS
   on:
     branch: gh-pages
