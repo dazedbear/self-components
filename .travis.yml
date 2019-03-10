@@ -1,12 +1,15 @@
 # 語言
 language: node_js
+
 # 穩定更新版
 node_js:
 - lts/*
-# 跑測試(只測master)
+
+# 跑CI的branch(只跑master)
 branches:
   only:
   - master
+
 # 定義 build 的過程會產生某些檔案是可以在下一次 build 利用
 cache:
   directories:
@@ -20,7 +23,7 @@ notifications:
     on_success: always
     on_failure: always
 
-# 安裝依賴
+# 安裝依賴(node_modules)
 install:
 - npm install
 
@@ -28,7 +31,7 @@ install:
 script:
 - npm run build-storybook
 
-# 待補
+# 部署位置設定
 deploy:
   provider: pages
   skip_cleanup: true
