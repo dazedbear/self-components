@@ -16,7 +16,7 @@ export const actions = {
   submitEditable: action('submitEditable'),
 };
 
-storiesOf('時間選擇器', module)
+storiesOf('Popover時間選擇器', module)
   .addDecorator(story => <div style={{ padding: '25px' }}>{story()}</div>)
   .add('使用文件', doc(readme))
   .add('編輯狀態', () => <DatePicker

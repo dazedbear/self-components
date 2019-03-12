@@ -42,7 +42,8 @@ deploy:
 
 # 與slack串
 notifications:
-  slack: akayhuselfslack:ZfFYzGzSyL9P5Y8R9vrUHxCz
+  rooms:
+    - secure: akayhuselfslack:ZfFYzGzSyL9P5Y8R9vrUHxCz
   template:
     - Deploy %{result} of %{repository}@%{branch} by %{author}
     - Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) in %{duration}
