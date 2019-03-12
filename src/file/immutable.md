@@ -12,6 +12,7 @@ console.log(
   map1.get("b"), // 2
   map2.get("b"), // 87
   map2.toJS() // { a: 1, b: 87, c: 3 }
+
 );
 ```
 

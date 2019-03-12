@@ -27,7 +27,6 @@ function test(fruit) {
 function test(fruit) {
   // extract conditions to array
   const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
-
   if (redFruits.includes(fruit)) {
     console.log('red');
   }
@@ -46,13 +45,11 @@ function test(fruit) {
 ```javascript
 function test(fruit, quantity) {
   const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
-
   // condition 1: fruit must has value
   if (fruit) {
     // condition 2: must be red
     if (redFruits.includes(fruit)) {
       console.log('red');
-
       // condition 3: must be big quantity
       if (quantity > 10) {
         console.log('big quantity');
@@ -64,8 +61,11 @@ function test(fruit, quantity) {
 }
 
 // test results
+
 test(null); // error: No fruits
+
 test('apple'); // print: red
+
 test('apple', 20); // print: red, big quantity
 ```
 
@@ -81,19 +81,17 @@ test('apple', 20); // print: red, big quantity
 
 function test(fruit, quantity) {
   const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
-
   // condition 1: throw error early
   if (!fruit) throw new Error('No fruit!');
 
-  // condition 2: must be red
-  if (redFruits.includes(fruit)) {
-    console.log('red');
-
-    // condition 3: must be big quantity
-    if (quantity > 10) {
-      console.log('big quantity');
-    }
-  }
+      // condition 2: must be red
+      if (redFruits.includes(fruit)) {
+        console.log('red');
+        // condition 3: must be big quantity
+        if (quantity > 10) {
+          console.log("big quantity");
+        }
+      }
 }
 ```
 
@@ -108,14 +106,14 @@ function test(fruit, quantity) {
   const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
 
   if (!fruit) throw new Error('No fruit!'); // condition 1: throw error early
+
   if (!redFruits.includes(fruit)) return; // condition 2: stop when fruit is not red
-
   console.log('red');
-
   // condition 3: must be big quantity
   if (quantity > 10) {
     console.log('big quantity');
   }
+
 }
 ```
 
@@ -128,7 +126,7 @@ function test(fruit, quantity) {
 - 代碼簡短直接，嵌套if更清晰
 - 反轉條件可能會引發更多的思考過程（增加認知負荷）
 
-因此，始終**旨在儘早減少嵌套和返回，但不要過度**。如果您感興趣，有一篇文章和StackOverflow討論會進一步討論這個主題：
+- 因此，始終**旨在儘早減少嵌套和返回，但不要過度**。如果您感興趣，有一篇文章和StackOverflow討論會進一步討論這個主題：
 
 - [避免其他，早期](http://blog.timoxley.com/post/47041269194/avoid-else-return-early)由蒂姆奧克斯利[回歸](http://blog.timoxley.com/post/47041269194/avoid-else-return-early)
 - [StackOverflow討論](https://softwareengineering.stackexchange.com/questions/18454/should-i-return-from-a-function-early-or-use-an-if-statement) if / else編碼風格
@@ -146,7 +144,9 @@ function test(fruit, quantity) {
 }
 
 //test results
+
 test('banana'); // We have 1 banana!
+
 test('apple', 2); // We have 2 apple!
 ```
 
@@ -159,7 +159,9 @@ function test(fruit, quantity = 1) { // if quantity not provided, default to one
 }
 
 //test results
+
 test('banana'); // We have 1 banana!
+
 test('apple', 2); // We have 2 apple!
 ```
 
@@ -178,8 +180,11 @@ function test(fruit) {
 }
 
 //test results
+
 test(undefined); // unknown
+
 test({ }); // unknown
+
 test({ name: 'apple', color: 'red' }); // apple
 ```
 
@@ -193,8 +198,11 @@ function test({name} = {}) {
 }
 
 //test results
+
 test(undefined); // unknown
+
 test({ }); // unknown
+
 test({ name: 'apple', color: 'red' }); // apple
 ```
 
@@ -216,8 +224,11 @@ function test(fruit) {
 }
 
 //test results
+
 test(undefined); // unknown
+
 test({ }); // unknown
+
 test({ name: 'apple', color: 'red' }); // apple
 ```
 
@@ -243,7 +254,9 @@ function test(color) {
 }
 
 //test results
+
 test(null); // []
+
 test('yellow'); // ['banana', 'pineapple']
 ```
 
@@ -259,6 +272,7 @@ const fruitColor = {
 
 function test(color) {
   return fruitColor[color] || [];
+
 }
 ```
 
@@ -273,6 +287,7 @@ const fruitColor = new Map()
 
 function test(color) {
   return fruitColor.get(color) || [];
+
 }
 ```
 
@@ -298,8 +313,8 @@ const fruits = [
 
 function test(color) {
   // use Array filter to find fruits in color
-
   return fruits.filter(f => f.color == color);
+
 }
 ```
 
@@ -326,6 +341,7 @@ function test() {
   }
 
   console.log(isAllRed); // false
+
 }
 ```
 
@@ -344,6 +360,7 @@ function test() {
   const isAllRed = fruits.every(f => f.color == 'red');
 
   console.log(isAllRed); // false
+
 }
 ```
 
@@ -362,6 +379,7 @@ function test() {
   const isAnyRed = fruits.some(f => f.color == 'red');
 
   console.log(isAnyRed); // true
+
 }
 ```
 
