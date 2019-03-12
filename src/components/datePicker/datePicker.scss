@@ -1,0 +1,34 @@
+.datePicker-main {
+
+  &--startTimeBlock {
+    margin-bottom: 5px;
+  }
+
+  &--timeConfirmationButton {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    button {
+      background-color: #f5b532;
+      border: 1px solid #f5b532;
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+}
+
+.ant-select-dropdown-menu-item-selected,
+.ant-select-dropdown-menu-item-active,
+.ant-select-dropdown-menu-item:hover {
+	background-color: #fff9da;
+}
+.default-popover-style {
+	cursor: pointer;
+}
+.default-seniority-style {
+  margin-left: 0.5em;
+}
+

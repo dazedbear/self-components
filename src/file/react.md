@@ -29,3 +29,9 @@ npm install --save react-router
 ```
 npm install --save react-router-dom
 ```
+
+- 安裝 Scss環境(看專案需求)
+- 網址：https://github.com/sass/node-sass
+```
+npm install node-sass
+```
